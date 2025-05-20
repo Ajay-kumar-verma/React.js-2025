@@ -96,3 +96,7 @@ REACT JS 2025
   - notes whether we pass component props get changed or component level state changes it re-render only NOT re-mount
    it mount only when it get attached to DOM tree . when it get re-attached again it will get call 
    
+   - same thing happend when we use glabla state management zustand or any state management library
+   - In This case last one get assigned   <button onClick={()=>{setCounter(counter+1);setCounter(counter+1);}}>Counter</button>
+
+   it works as expected    <button onClick={()=>{setCounter(counter=>counter+1);setCounter(counter=>counter+1);}}>Counter</button>
