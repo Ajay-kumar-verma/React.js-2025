@@ -72,3 +72,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ---------------------------------------------------------------------------------------
 REACT JS 2025
 
+ - <React.StrictMode>
+  it called the component twice to check is there any erro or not .
+
+ - when component ,nested component even deep nested component get created the only useEffect get called from last component 
+ - Component gets called when we make use of it
+ - when we just import it create its instance in Ra, and it load all the URL used at top   
+ - It mount from bottom to top in reverse order and its fucntionality work in that order as well, useEffect too
+ - After last componenet loading their parent cokmponet load and recusively go up
+ - whatever we put in the event that get execute , Either it should be function name only or inside function function call 
+ - when component level state we change it re-render component with latst state and re-render only nested or deep nested component 
+  but it does not call useefect because it does not mount or re-mount 
+
+  - when componenet get removed from DOM tree un-mount function get created
+     it must be inside useEffect  return ()=>{
+    console.log("Componenet un- Mounted")
+        }
+
+  - and when we attached any componenet that comonent get mount and useEffect get executed 
+
+  
+
+  - notes whether we pass component props get changed or component level state changes it re-render only NOT re-mount
+   it mount only when it get attached to DOM tree . when it get re-attached again it will get call 
+   
